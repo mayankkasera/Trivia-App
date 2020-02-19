@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.main.que.QueFragment">
 
     <ImageView
@@ -45,9 +45,9 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/app_name"
-        android:layout_marginTop="8dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/font"
         android:text="@string/app_name"
         android:textColor="@color/white"
@@ -60,11 +60,11 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/que"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="16dp"
         android:fontFamily="@font/font"
         android:text="Que : "
         android:textColor="@color/white"
@@ -74,48 +74,119 @@
         app:layout_constraintTop_toBottomOf="@+id/app_name" />
 
     <RadioGroup
-        android:visibility="gone"
         android:id="@+id/singleOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/que"
         tools:layout_editor_absoluteX="16dp">
 
         <RadioButton
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:buttonTint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/singleOption1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/singleOption1"/>
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <RadioButton
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:buttonTint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/singleOption2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/singleOption2"/>
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <RadioButton
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:buttonTint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/singleOption3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/singleOption3"/>
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
         <RadioButton
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:buttonTint="@color/white"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginRight="16dp"
+            android:id="@+id/singleOption4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/singleOption4"/>
+            android:buttonTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
     </RadioGroup>
 
+
+    <CheckBox
+        android:id="@+id/multipleSelect1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:buttonTint="@color/white"
+        android:padding="10dp"
+        android:text="Java"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/que" />
+
+    <CheckBox
+        android:id="@+id/multipleSelect2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:buttonTint="@color/white"
+        android:padding="10dp"
+        android:text="Java"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multipleSelect1" />
+
+    <CheckBox
+        android:id="@+id/multipleSelect3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:buttonTint="@color/white"
+        android:padding="10dp"
+        android:text="Java"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multipleSelect2" />
+
+    <CheckBox
+        android:id="@+id/multipleSelect4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:buttonTint="@color/white"
+        android:padding="10dp"
+        android:text="Java"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multipleSelect3" />
 
 
     <Button
@@ -123,8 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/next_btn_background"
         android:fontFamily="@font/font"
         android:paddingLeft="50dp"
@@ -133,10 +203,22 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/singleOption" />
+        app:layout_constraintTop_toBottomOf="@+id/barrier" />
 
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="multipleSelect4,singleOption"
+        tools:layout_editor_absoluteY="731dp" />
 
-
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="multipleSelect1,multipleSelect3,multipleSelect2,multipleSelect4" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
