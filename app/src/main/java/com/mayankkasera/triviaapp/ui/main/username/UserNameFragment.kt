@@ -12,6 +12,7 @@ import com.mayankkasera.triviaapp.R
 import com.mayankkasera.triviaapp.pojo.Result
 import com.mayankkasera.triviaapp.ui.main.que.QueFragment
 import kotlinx.android.synthetic.main.fragment_user_name.view.*
+import java.util.*
 
 /**
  * A simple [Fragment] subclass.
@@ -32,9 +33,9 @@ class UserNameFragment : Fragment() {
             if (mView.username.text.toString().length > 0)
                 replace(QueFragment.newInstance(
                     Result(
-                        0,
-                        mView.username.text.toString(),
-                        arrayListOf()
+                        calendar = Calendar.getInstance(),
+                        name = mView.username.text.toString(),
+                        list =  arrayListOf()
                     )))
             else
                 Toast.makeText(context, "Enter user name", Toast.LENGTH_SHORT).show()

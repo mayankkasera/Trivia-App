@@ -65,7 +65,14 @@ dependencies {
     //ViewModel and LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:2.1.0"
 
+    //Room
+    annotationProcessor 'androidx.room:room-compiler:2.2.3'
+    implementation "androidx.room:room-runtime:2.2.3"
+    kapt "androidx.room:room-compiler:2.2.3"
+
 
     //other
     implementation 'com.tuyenmonkey:mkloader:1.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.0'
+    implementation 'com.facebook.stetho:stetho:1.5.1'
 }
