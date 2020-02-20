@@ -4,6 +4,8 @@ import android.view.View
 import androidx.constraintlayout.widget.Group
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import java.text.SimpleDateFormat
+import java.util.*
 
 fun View.visible() {
     visibility = View.VISIBLE
@@ -25,8 +27,8 @@ fun <T : ViewModel?> T.createFactory(): ViewModelProvider.Factory {
     }
 }
 
-fun Group.setAllOnClickListener(listener: View.OnClickListener) {
-    referencedIds.forEach { id ->
-        rootView.findViewById<View>(id).setOnClickListener(listener)
-    }
+
+fun Calendar.toFormattedDisplay(): String {
+    val simpleDateFormat = SimpleDateFormat("dd-MMMM-yyyy hh:mm a", Locale.US)
+    return simpleDateFormat.format(this.time)
 }

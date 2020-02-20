@@ -16,6 +16,8 @@ import com.mayankkasera.triviaapp.data.que.QueRepo
 import com.mayankkasera.triviaapp.data.results.ResultsRepo
 import com.mayankkasera.triviaapp.pojo.Result
 import com.mayankkasera.triviaapp.ui.main.que.QueFragment
+import com.mayankkasera.triviaapp.ui.main.resultlist.ResultListFragment
+import com.mayankkasera.triviaapp.ui.main.username.UserNameFragment
 import kotlinx.android.synthetic.main.fragment_result.view.*
 
 /**
@@ -51,12 +53,30 @@ class ResultFragment : Fragment() {
 
         mView.finish.setOnClickListener{
             resultViewModel.insetResult(result)
+            replace(UserNameFragment())
+        }
+
+        mView.history.setOnClickListener{
+            resultViewModel.insetResult(result)
+            replace(ResultListFragment())
         }
 
 
         return mView;
     }
 
+    /*
+       For replaceing fragment
+   */
+    fun replace(fragment: Fragment) {
+        val transaction = fragmentManager?.beginTransaction()
+        transaction?.replace(R.id.frame, fragment)
+        transaction?.commit()
+    }
+
+    /*
+       initialization
+    */
     private fun init() {
         result = arguments?.getParcelable<Result>(RESULT) as Result
         mView.name.text = result.name

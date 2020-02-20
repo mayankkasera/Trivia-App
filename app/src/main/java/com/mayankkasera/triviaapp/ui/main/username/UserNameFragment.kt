@@ -29,8 +29,9 @@ class UserNameFragment : Fragment() {
         mView = inflater.inflate(R.layout.fragment_user_name, container, false)
 
 
+        //OnClickListener on next button
         mView.next.setOnClickListener {
-            if (mView.username.text.toString().length > 0)
+            if (mView.username.text.toString().length > 0)  // Empty Check
                 replace(QueFragment.newInstance(
                     Result(
                         calendar = Calendar.getInstance(),
@@ -44,6 +45,9 @@ class UserNameFragment : Fragment() {
         return mView
     }
 
+    /*
+        For replaceing fragment
+    */
     fun replace(fragment: Fragment) {
         val transaction = fragmentManager?.beginTransaction()
         transaction?.replace(R.id.frame, fragment)

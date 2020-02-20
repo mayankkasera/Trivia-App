@@ -16,6 +16,9 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /*
+        For replaceing fragment
+    */
     fun replace(fragment: Fragment){
         val transaction = supportFragmentManager.beginTransaction()
         transaction.replace(R.id.frame, fragment)

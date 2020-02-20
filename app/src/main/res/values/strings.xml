@@ -4,5 +4,5 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="name">Username</string>
-    <string name="enter_user_name">Enter user name</string>
+    <string name="enter_user_name">What is your name?</string>
 </resources>
